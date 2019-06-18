@@ -1,0 +1,23 @@
+---
+sqs:
+  queue:
+    aws:
+      queueUrl: http://localhost:4576/queue/appquarium-pipeline-test-salesforce-worker.fifo
+      credentials:
+        endpoint: "http://localhost:4576"
+        accessKeyId: abc
+        secretAccessKey: abc
+        region: us-east-1
+mail:
+  host: localhost
+  port: 2525
+  secure: false
+  ignoreTLS: true
+mysql:
+  host: localhost
+  database: appquarium
+  user: it_user
+  password: user1234
+  connectionLimit: 5
+
+

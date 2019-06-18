@@ -1,0 +1,50 @@
+{
+  "name": "commit-worker",
+  "version": "1.0.0",
+  "description": "a commit worker service for nodejs meetup",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run eslint && jest --coverage --runInBand --config jest.config.json",
+    "start": "node src"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^2.2.2",
+    "async-retry": "^1.2.3",
+    "aws-sdk": "^2.441.0",
+    "bluebird": "^3.5.3",
+    "bunyan": "^1.8.12",
+    "bunyan-elasticsearch": "^1.0.1",
+    "config": "^2.0.1",
+    "dotenv": "^6.2.0",
+    "intelligence-infrastructure-utils": "^1.5.1",
+    "ioredis": "^4.2.0",
+    "joi": "^14.3.1",
+    "koa": "^2.6.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.11",
+    "moment-timezone": "^0.5.25",
+    "mysql": "^2.17.1",
+    "nodemailer": "^4.6.4",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "qs": "^6.7.0",
+    "queue-router": "^0.2.2",
+    "squel": "^5.12.2",
+    "superagent": "^4.0.0-beta.5"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "intelligence-infrastructure-eslint": "0.0.5"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "!src/index.js",
+      "!src/lib/router.js",
+      "!src/config/*.js",
+      "!src/lib/services/*.js",
+      "src/lib/**/*.{js,jsx}"
+    ]
+  }
+}

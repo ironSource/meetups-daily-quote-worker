@@ -1,0 +1,7 @@
+---
+mail:
+  service: gmail
+mysql:
+  host: mysql-staging.appquarium.com
+  database: appsource
+  connectionLimit: 5
