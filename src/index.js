@@ -13,11 +13,7 @@ async function start() {
     });
 
 
-    workerFactory.create('SQS', router, {
-            queue: {
-                aws: config.sqs
-            }
-        })
+    workerFactory.create('SQS', router, config.sqs)
         .on('error', error => console.error('worker#error', error))
         .init()
         .start();
