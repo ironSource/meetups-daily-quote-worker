@@ -2,7 +2,7 @@
 sqs:
   queue:
     aws:
-      queueUrl: http://localhost:4576/queue/iron_queue.fifo
+      queueUrl: http://localhost:4576/queue/iron_queue
       credentials:
         endpoint: "http://localhost:4576"
         accessKeyId: abc
