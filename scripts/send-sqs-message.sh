@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+aws --endpoint-url=http://localhost:4576 sqs send-message --queue-url http://localhost:4576/queue/iron_queue --message-body '{"type": "SEND_DAILY_QUOTE", "content": {"to": "rami@moshe.com", "dailyQuote": "it is zigius"}}'

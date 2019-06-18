@@ -3,13 +3,19 @@
 const config        = require('config');
 const workerFactory = require('queue-router').workerFactory;
 const Router        = require('queue-router').Router;
+const mysqlClient   = require('./clients/mysql');
+const mailClient    = require('./clients/mail');
 
 
 async function start() {
     const router = new Router();
 
-    router.add('send_daily_quote', {
-        handler: require('./handler').sendDailyQuote
+    router.add('SEND_DAILY_QUOTE', {
+        handler: async (content) => {
+            await mysqlClient.saveDailyQuote(content.to, content.dailyQuote);
+            await mailClient.send(content.to, content.dailyQuote);
+            console.log('message_processed');
+        }
     });
 
 
