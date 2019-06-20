@@ -1,12 +1,3 @@
 ---
 mail:
   port: 465
-sqs:
-  queue:
-    aws:
-      queueUrl: http://localhost:4576/queue/appquarium-pipeline-test-salesforce-worker.fifo
-      credentials:
-        endpoint: "http://localhost:4576"
-        accessKeyId: abc
-        secretAccessKey: abc
-        region: us-east-1
