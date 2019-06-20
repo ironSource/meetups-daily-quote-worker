@@ -15,7 +15,7 @@ mail:
   ignoreTLS: true
 mysql:
   host: localhost
-  database: appquarium
+  database: daily_quote
   user: it_user
   password: user1234
   connectionLimit: 5

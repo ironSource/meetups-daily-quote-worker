@@ -2,6 +2,6 @@
 mail:
   service: gmail
 mysql:
-  host: mysql-staging.appquarium.com
-  database: appsource
+  host: mysql.iron.com
+  database: irondb
   connectionLimit: 5
