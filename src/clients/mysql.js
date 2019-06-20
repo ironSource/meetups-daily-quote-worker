@@ -9,6 +9,6 @@ exports.saveDailyQuote = async (to, dailyQuote) => {
 
     connection.connect();
     Promise.promisifyAll(connection);
-    await connection.queryAsync(`insert into daily_quote (daily_quote) values('${dailyQuote}')`);
+    await connection.queryAsync(`insert into daily_quote (to, daily_quote) values('${to}, ${dailyQuote}')`);
     connection.end();
 };
