@@ -5,3 +5,9 @@ mysql:
   host: mysql.iron.com
   database: irondb
   connectionLimit: 5
+sqs:
+  queue:
+    aws:
+      queueUrl: https://sqs.us-east-1.amazonaws.com/888476237488/daily_quote_queue
+      credentials:
+        region: us-east-1

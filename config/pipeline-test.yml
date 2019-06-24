@@ -2,7 +2,7 @@
 sqs:
   queue:
     aws:
-      queueUrl: http://localstack:4576/queue/iron_queue
+      queueUrl: http://localstack:4576/queue/daily_quote_queue
       credentials:
         endpoint: "http://localstack:4576"
         accessKeyId: abc
