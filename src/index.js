@@ -7,6 +7,7 @@ const mysqlClient   = require('./clients/mysql');
 const mailClient    = require('./clients/mail');
 
 const handler = async (content) => {
+    console.log('message_received');
     await mysqlClient.saveDailyQuote(content.to, content.dailyQuote);
     await mailClient.send(content.to, content.dailyQuote);
     console.log('message_processed');
